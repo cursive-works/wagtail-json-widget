@@ -15,3 +15,15 @@ Then add the following to your project's `INSTALLED_APPS`.
 ```
 'wagtail_json_widget',
 ```
+
+## Usage
+
+```python
+from wagtail_json_widget.blocks import JsonBlock
+
+class MyBlock(blocks.StructBlock):
+ 
+    my_json = JsonBlock()
+    ...
+    
+```
