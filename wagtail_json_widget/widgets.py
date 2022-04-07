@@ -17,13 +17,13 @@ class JSONWidgetAdapter(WidgetAdapter):
             # widget.extra_options, 
         ]
     class Media:
-        js = ['wagtail_json_widget/js/json_widget.js']
+        js = ['wagtail_json_widget/js/json_block_widget.js']
 
 
 class JSONEditorWidget(forms.Widget):
     template_name = 'wagtail_json_widget.html'
     
-    def __init__(self, attrs=None, mode='code', options=None, width=None, height=None):
+    def __init__(self, attrs=None, mode='code', options=None):
         default_options = {
             'modes': ['text', 'code', 'tree', 'form', 'view'],
             'mode': mode,
@@ -39,11 +39,13 @@ class JSONEditorWidget(forms.Widget):
     def get_context(self, name, value, attrs):
         context = super().get_context(name, value, attrs)
         context['widget']['options'] = json.dumps(self.options)
+        print(context)
         return context
 
     class Media:
         js = (
             getattr(settings, "JSON_EDITOR_JS", 'dist/jsoneditor.min.js'),
+            'wagtail_json_widget/js/json_widget.js'
         )
         css = {
             'all': (
