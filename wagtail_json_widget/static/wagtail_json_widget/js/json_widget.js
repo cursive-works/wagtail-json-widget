@@ -29,12 +29,13 @@ class JSONEditorWidget {
     boundWidgetClass = BoundWidget;
 
     render(placeholder, name, id, initialState) {
+        // Create the JSONEditor widget
         const html = this.html.replace(/__NAME__/g, name).replace(/__ID__/g, id);
         const idForLabel = this.idPattern.replace(/__ID__/g, id);
         placeholder.innerHTML = html
         const boundWidget = new this.boundWidgetClass(placeholder, name, idForLabel, initialState);
 
-        // Editor initialization
+        // Initialize the JSONEditor widget
         const textarea = document.getElementById(`${id}_textarea`);
         const options = {"modes": ["text", "code", "tree", "form", "view"], "mode": "code", "search": true};
 

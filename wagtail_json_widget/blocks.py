@@ -9,7 +9,7 @@ from .widgets import JSONEditorWidget
 
 class JSONBlock(blocks.FieldBlock):
     """
-    JSON field block
+    JSON StreamField block.
     """
     def __init__(self, required=True, help_text=None, max_length=None, min_length=None, validators=(), **kwargs):
         self.field = forms.CharField(

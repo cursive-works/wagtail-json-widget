@@ -1,5 +1,4 @@
 import json
-from builtins import super
 
 from django import forms
 from django.conf import settings
@@ -35,7 +34,7 @@ class JSONEditorWidget(forms.Widget):
 
         self.options = default_options
 
-        super(JSONEditorWidget, self).__init__(attrs=attrs)
+        super().__init__(attrs=attrs)
 
     def get_context(self, name, value, attrs):
         context = super().get_context(name, value, attrs)
