@@ -8,7 +8,7 @@ from wagtail.core.telepath import register
 from wagtail.core.widget_adapters import WidgetAdapter
 
 
-class JsonWidgetAdapter(WidgetAdapter):
+class JSONWidgetAdapter(WidgetAdapter):
     js_constructor = 'wagtail_json_widget.json_widget'
 
     def js_args(self, widget):
@@ -21,7 +21,7 @@ class JsonWidgetAdapter(WidgetAdapter):
         js = ['wagtail_json_widget/js/json_widget.js']
 
 
-class JsonEditorWidget(forms.Widget):
+class JSONEditorWidget(forms.Widget):
     template_name = 'wagtail_json_widget.html'
     
     def __init__(self, attrs=None, mode='code', options=None, width=None, height=None):
@@ -35,7 +35,7 @@ class JsonEditorWidget(forms.Widget):
 
         self.options = default_options
 
-        super(JsonEditorWidget, self).__init__(attrs=attrs)
+        super(JSONEditorWidget, self).__init__(attrs=attrs)
 
     def get_context(self, name, value, attrs):
         context = super().get_context(name, value, attrs)
@@ -52,4 +52,4 @@ class JsonEditorWidget(forms.Widget):
             )
         }
 
-register(JsonWidgetAdapter(), JsonEditorWidget)
+register(JSONWidgetAdapter(), JSONEditorWidget)
