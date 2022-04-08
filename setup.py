@@ -24,8 +24,8 @@ setup(
     author='Patrick Smith',
     author_email='pat.smith@cursive.works',
     keywords=['WAGTAIL', 'JSON', 'STREAMFIELD', 'JSONEditor', 'WAGTAIL CMS'],
-    classifiers=[
-        'Development Status :: 3 - Alpha',
+    classifiers=[ 
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
