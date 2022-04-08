@@ -31,5 +31,4 @@ function createJSONFieldEditors() {
         }
         new JSONEditorWidget(collection[0]);
     }
-
 }

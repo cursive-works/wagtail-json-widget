@@ -1,5 +1,4 @@
-class JSONBoundWidget {
-    
+class JSONBoundWidget {  
     constructor(element, name, idForLabel, initialState) {
         const selector = 'textarea[name="' + name + '"]';
         this.input = element.querySelector(selector);

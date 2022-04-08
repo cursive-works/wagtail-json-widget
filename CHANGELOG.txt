@@ -1,5 +1,11 @@
-0.0.1 (2022-04-xx)
-------------------------
+0.0.2 (2022-04-08)
+------------------
+
+* set development status to Beta
+* removed extraneous setup.py (doh)
+
+0.0.1 (2022-04-07)
+------------------
 
 * Added JSONEditor widget and streamfield Block
 

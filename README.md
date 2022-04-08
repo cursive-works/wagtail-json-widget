@@ -1,6 +1,6 @@
 # Wagtail JSON Widget
 
-JSON editing for Wagtail Admin.
+JSON editing for Wagtail Admin with [JSON Editor](https://github.com/josdejong/jsoneditor)
 
 ## Installation
 
