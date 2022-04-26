@@ -14,7 +14,6 @@ class JSONWidgetAdapter(WidgetAdapter):
         return [
             widget.render('__NAME__', None, attrs={'id': '__ID__'}),
             widget.id_for_label('__ID__'),
-            # widget.extra_options, 
         ]
     class Media:
         js = ['wagtail_json_widget/js/json_block_widget.js']
@@ -44,12 +43,13 @@ class JSONEditorWidget(forms.Widget):
 
     class Media:
         js = (
-            getattr(settings, "JSON_EDITOR_JS", 'dist/jsoneditor.min.js'),
+            getattr(settings, "JSON_EDITOR_JS", 'dist/jsoneditor.9.7.4.min.js'),
             'wagtail_json_widget/js/json_widget.js'
         )
         css = {
             'all': (
-                getattr(settings, "JSON_EDITOR_CSS", 'dist/jsoneditor.min.css'),
+                getattr(settings, "JSON_EDITOR_CSS", 'dist/jsoneditor.9.7.4.min.css'),
+                'wagtail_json_widget/css/json_widget.css'
             )
         }
 
