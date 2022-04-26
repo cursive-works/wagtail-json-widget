@@ -1,6 +1,8 @@
 # Wagtail JSON Widget
 
-JSON editing for Wagtail Admin with [JSON Editor](https://github.com/josdejong/jsoneditor)
+JSON editing for Wagtail Admin with [JSON Editor](https://github.com/josdejong/jsoneditor). Provides widgets for Page and StreamField.
+
+![Screenshot](./docs/img/wjw-menu.png)
 
 ## Installation
 
