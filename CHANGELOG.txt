@@ -1,13 +1,20 @@
+0.0.4 (2022-05-05)
+------------------
+* set wagtail dependency
+
 0.0.3 (2022-04-26)
+------------------
 
 * updated to include jsoneditor v9.7.4
 * styled to fit in better with Wagtail UI
+
 
 0.0.2 (2022-04-08)
 ------------------
 
 * set development status to Beta
 * removed extraneous setup.py (doh)
+
 
 0.0.1 (2022-04-07)
 ------------------
