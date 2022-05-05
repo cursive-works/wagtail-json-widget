@@ -9,6 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 
 # Package dependencies
 install_requires = [
+    "wagtail>=2.13",
 ]
 
 setup(
