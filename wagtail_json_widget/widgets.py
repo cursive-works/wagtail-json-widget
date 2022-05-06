@@ -38,7 +38,6 @@ class JSONEditorWidget(forms.Widget):
     def get_context(self, name, value, attrs):
         context = super().get_context(name, value, attrs)
         context['widget']['options'] = json.dumps(self.options)
-        print(context)
         return context
 
     class Media:
