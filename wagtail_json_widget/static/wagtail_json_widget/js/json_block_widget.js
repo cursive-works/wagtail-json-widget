@@ -30,7 +30,6 @@ class JSONBlockEditorWidget {
 
     render(placeholder, name, id, initialState) {
         // Create the JSONEditor widget
-        console.log(`Init: ${id}_textarea`);
         const html = this.html.replace(/__NAME__/g, name).replace(/__ID__/g, id);
         const idForLabel = this.idPattern.replace(/__ID__/g, id);
         placeholder.innerHTML = html
