@@ -1,1 +1,2 @@
 include wagtail_json_widget/templates/*
+include wagtail_json_widget/static/*
