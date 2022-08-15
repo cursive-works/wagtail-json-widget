@@ -1,2 +1,1 @@
-include wagtail_json_widget/templates/*
-graft wagtail_json_widget/static
+graft wagtail_json_widget
