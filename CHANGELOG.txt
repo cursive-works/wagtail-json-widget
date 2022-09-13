@@ -1,3 +1,11 @@
+0.0.6 (2022-09-13)
+------------------
+* add missing MANIFEST.in (sowinski)
+
+0.0.5 (2022-05-06)
+------------------
+* fixed README.md links
+
 0.0.4 (2022-05-05)
 ------------------
 * set wagtail dependency
@@ -20,4 +28,3 @@
 ------------------
 
 * Added JSONEditor widget and streamfield Block
-
