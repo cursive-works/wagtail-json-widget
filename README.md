@@ -51,10 +51,10 @@ As a StreamField block:
 
 ```python
 from wagtail.core import blocks
-from wagtail_json_widget.blocks import JsonBlock
+from wagtail_json_widget.blocks import JSONBlock
 
 class MyBlock(blocks.StructBlock):
-    my_json_block = JsonBlock()
+    my_json_block = JSONBlock()
     ...
-    
+
 ```
