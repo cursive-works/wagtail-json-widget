@@ -3,8 +3,8 @@ import json
 from django import forms
 from django.conf import settings
 
-from wagtail.core.telepath import register
-from wagtail.core.widget_adapters import WidgetAdapter
+from wagtail.telepath import register
+from wagtail.widget_adapters import WidgetAdapter
 
 
 class JSONWidgetAdapter(WidgetAdapter):

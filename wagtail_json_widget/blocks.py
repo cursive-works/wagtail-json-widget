@@ -3,7 +3,7 @@ import json
 from django import forms
 from django.core.exceptions import ValidationError
 
-from wagtail.core import blocks
+from wagtail import blocks
 
 from .widgets import JSONEditorWidget
 
@@ -20,7 +20,10 @@ class JSONBlock(blocks.FieldBlock):
             min_length=min_length,
             validators=validators,
         )
-        
+
+        if 'default' not in kwargs:
+            kwargs['default'] = 'null'
+
         super().__init__(**kwargs)
 
     def clean(self, value):

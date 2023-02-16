@@ -9,7 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 
 # Package dependencies
 install_requires = [
-    "wagtail>=2.13",
+    "wagtail>=4.0",
 ]
 
 setup(
@@ -25,7 +25,7 @@ setup(
     author='Patrick Smith',
     author_email='pat.smith@cursive.works',
     keywords=['WAGTAIL', 'JSON', 'STREAMFIELD', 'JSONEditor', 'WAGTAIL CMS'],
-    classifiers=[ 
+    classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
@@ -36,6 +36,8 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development',

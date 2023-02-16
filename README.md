@@ -24,7 +24,7 @@ As a field:
 ```python
 from django.db import models
 from django import forms
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.admin.panels import FieldPanel
 from wagtail.admin.forms import WagtailAdminPageForm
 
 from wagtail.core.models import Page
@@ -39,7 +39,7 @@ class MyPageForm(WagtailAdminPageForm):
 
 class MyPage(Page):
 
-    myjson = models.JSONField(null=True)
+    myjson = models.JSONField(null=True, blank=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('myjson'),
@@ -50,7 +50,7 @@ class MyPage(Page):
 As a StreamField block:
 
 ```python
-from wagtail.core import blocks
+from wagtail import blocks
 from wagtail_json_widget.blocks import JSONBlock
 
 class MyBlock(blocks.StructBlock):
