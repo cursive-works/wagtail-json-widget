@@ -1,7 +1,7 @@
 class JSONEditorWidget {
 
-    constructor(element, options) {
-        this.initEditor(element, options);
+    constructor(element) {
+        this.initEditor(element);
     }
 
     initEditor(element) {
