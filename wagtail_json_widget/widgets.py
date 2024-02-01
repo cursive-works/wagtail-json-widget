@@ -21,13 +21,14 @@ class JSONWidgetAdapter(WidgetAdapter):
 
 class JSONEditorWidget(forms.Widget):
     template_name = 'wagtail_json_widget.html'
-    
+
     def __init__(self, attrs=None, mode='code', options=None):
         default_options = {
             'modes': ['text', 'code', 'tree', 'form', 'view'],
             'mode': mode,
             'search': True,
         }
+
         if options:
             default_options.update(options)
 

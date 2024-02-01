@@ -1,13 +1,18 @@
 class JSONEditorWidget {
 
-    constructor(element) {
-        this.initEditor(element);
+    constructor(element, options) {
+        this.initEditor(element, options);
     }
 
     initEditor(element) {
         // Initialize the JSONEditor widget
         const textarea = element.querySelector('textarea');
-        const options = {"modes": ["text", "code", "tree", "form", "view"], "mode": "code", "search": true};
+        const raw_opts = textarea.dataset.options;
+
+        let options = {"modes": ["text", "code", "tree", "form", "view"], "mode": "code", "search": true};
+        if (raw_opts) {
+            options = JSON.parse(raw_opts);
+        }
 
         options.onChange = function () {
             var json = editor.get();
@@ -34,7 +39,8 @@ function createJSONFieldEditors() {
         // So we don't duplicate editor widgets if we have JSONBlock in streamfields
         // and model field elements on the same page.
         if (collection[0].firstElementChild.nodeName.toUpperCase() == 'TEXTAREA') {
-            new JSONEditorWidget(collection[0]);
+            const element = collection[0];
+            new JSONEditorWidget(element);
         }
     }
 }

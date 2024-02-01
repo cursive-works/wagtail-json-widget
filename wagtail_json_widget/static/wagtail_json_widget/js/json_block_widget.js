@@ -1,4 +1,4 @@
-class JSONBoundWidget {  
+class JSONBoundWidget {
     constructor(element, name, idForLabel, initialState) {
         const selector = 'textarea[name="' + name + '"]';
         this.input = element.querySelector(selector);
@@ -47,7 +47,7 @@ class JSONBlockEditorWidget {
         options.onChange = function () {
             var json = editor.get();
             textarea.value=JSON.stringify(json);
-        } 
+        }
         const editor = new JSONEditor(placeholder, options);
         editor.set(json);
     }
