@@ -19,36 +19,43 @@
     color: #333;
 }
 
-.jsoneditor-contextmenu .jsoneditor-menu li button.jsoneditor-selected, 
-.jsoneditor-contextmenu .jsoneditor-menu li button.jsoneditor-selected:focus, 
+.jsoneditor-contextmenu .jsoneditor-menu li button.jsoneditor-selected,
+.jsoneditor-contextmenu .jsoneditor-menu li button.jsoneditor-selected:focus,
 .jsoneditor-contextmenu .jsoneditor-menu li button.jsoneditor-selected:hover
 {
-    background-color: var(--color-primary);
+    background-color: var(--w-color-primary);
 }
 
 .jsoneditor-modal .pico-modal-header {
-    background-color: var(--color-primary);
+    background-color: var(--w-color-primary);
 }
 
 .jsoneditor-modal a,
 .jsoneditor-modal .jsoneditor-jmespath-label {
-    color: var(--color-primary);
+    color: var(--w-color-primary);
 }
 
-.jsoneditor input, 
-.jsoneditor input:not([type]), 
-.jsoneditor input[type="search"], 
-.jsoneditor input[type="text"], 
-.jsoneditor-modal input, 
-.jsoneditor-modal input:not([type]), 
-.jsoneditor-modal input[type="search"], 
+.jsoneditor input,
+.jsoneditor input:not([type]),
+.jsoneditor input[type="search"],
+.jsoneditor input[type="text"],
+.jsoneditor-modal input,
+.jsoneditor-modal input:not([type]),
+.jsoneditor-modal input[type="search"],
 .jsoneditor-modal input[type="text"] {
     width: auto;
 }
 
-.jsoneditor-modal .jsoneditor-button-group.jsoneditor-button-group-value-asc input.jsoneditor-button-asc, 
-.jsoneditor-modal .jsoneditor-button-group.jsoneditor-button-group-value-desc input.jsoneditor-button-desc {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
+.jsoneditor-tree input[type="checkbox"] {
+    position: unset;
 }
 
+.jsoneditor-modal .jsoneditor-button-group.jsoneditor-button-group-value-asc input.jsoneditor-button-asc,
+.jsoneditor-modal .jsoneditor-button-group.jsoneditor-button-group-value-desc input.jsoneditor-button-desc {
+    background: var(--w-color-primary);
+    border-color: var(--w-color-primary);
+}
+
+.jsoneditor-frame input[type="text"] {
+    min-height: unset;
+}
