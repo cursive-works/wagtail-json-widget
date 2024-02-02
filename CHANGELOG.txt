@@ -1,3 +1,8 @@
+0.0.8 (2024-02-02)
+------------------
+* fix editor options not being passed to the editor widget
+* update styles for Wagtail 4
+
 0.0.7 (2023-02-16)
 ------------------
 * update for Wagtail 4
