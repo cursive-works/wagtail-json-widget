@@ -3,8 +3,14 @@ import json
 from django import forms
 from django.conf import settings
 
-from wagtail.telepath import register
-from wagtail.widget_adapters import WidgetAdapter
+from wagtail import VERSION as WAGTAIL_VERSION
+
+if WAGTAIL_VERSION >= (7, 1):
+    from wagtail.admin.telepath import register
+    from wagtail.admin.telepath.widgets import WidgetAdapter
+else:
+    from wagtail.telepath import register
+    from wagtail.widget_adapters import WidgetAdapter
 
 
 class JSONWidgetAdapter(WidgetAdapter):
