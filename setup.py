@@ -1,5 +1,5 @@
 import os
-from setuptools import setup, find_packages
+from setuptools import setup
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
@@ -15,7 +15,12 @@ install_requires = [
 setup(
     name='wagtail_json_widget',
     version=__import__('wagtail_json_widget').__version__,
-    packages=find_packages(),
+    packages=[
+        'wagtail_json_widget',
+        'wagtail_json_widget.templates',
+        'wagtail_json_widget.static.wagtail_json_widget.js',
+        'wagtail_json_widget.static.wagtail_json_widget.css',
+    ],
     include_package_data=True,
     license='MIT',
     description='JSONEditor for Wagtail CMS',
